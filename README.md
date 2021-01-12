@@ -6,16 +6,15 @@
     3. Guesses remaining span
     4. Too high/ too low/ you got it
 
-
-
 1. get the DOM elements
 2. Initialize the global state ('let')
     -Random number: n
     -Guesses remaining: 4
+
 3. Add event listener to the button
     -onclick
         -state decreases remaining guesses ('--')
-        -stores guess in a variable ('someInput.value')
+        -stores the guess in a variable ('someInput.value')
         -compare guess to the random number ('math.ceil(Math.random() * 20)')
         -if user guess is greater than inject ('too high')
             -Update the View
