@@ -16,11 +16,12 @@
         -state decreases remaining guesses ('--')
         -stores the guess in a variable ('someInput.value')
         -compare guess to the random number ('math.ceil(Math.random() * 20)')
+
         -if user guess is greater than inject ('too high')
             -Update the View
                 -Check if there are any guesses left
                 -if not, disable input ('losing message')
-                -change the remaining guesses ('textContent')
+                -change the remaining guesses ('textContent')                
         -if user guess is less than inject ('too low')
             -Update the View
                 -Check if there are any guesses left

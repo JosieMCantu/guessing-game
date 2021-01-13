@@ -17,36 +17,14 @@ let guessesRemaining = 4;
 guessButton.addEventListener('click', () => {
     guessesRemaining--;
     guessesSpace.textContent = guessesRemaining;
-    if (guessesRemaining < 1) {
+    if (guessesRemaining < 1){
         guessButton.disabled = true;
-        guessResults.textContent = 'Game Over';
+        guessResults.textContent = 'No more guesses';
+    } else if (numberGuessed > randomNumber){
+        guessResults.textContent = 'Too High!';
+    } else if (numberGuessed === randomNumber){
+        guessResults.textContent = 'You win!';
+    } else if (numberGuessed < randomNumber){
+        guessResults.textContent = 'Too low!';
     }
 });
-
-
-
-
-
-
-
-
-
-
-    //    if (numberGuessed > randomNumber) {
-         
-    //         guessResults.textContent = 'Too High!';
-    //          else {
-    //             ;
-    //         }  
-    //    }  
-
-
-// check if there are guesses left
-                //if not disable input
-            // change the remaining guesses
-
-        // } else if (numberGuessed !== randomNumber) {
-        //     guessResults.textContent = 'Nope!';
-        // } else (numberGuessed === randomNumber) 
-        //     guessResults.textContent = 'Yes! you win!';
-        //});
