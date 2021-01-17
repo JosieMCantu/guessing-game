@@ -1,6 +1,6 @@
 
 // import functions and grab DOM elements
-import { guessNumber } from '/utlis.js';
+import { guessNumber } from '/utils.js';
 
 const guessButton = document.getElementById('guess-button');
 
