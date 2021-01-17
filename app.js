@@ -1,6 +1,5 @@
 
-// import functions and grab DOM elements
-//import { guessNumber } from '/utils.js';
+
 const guessesSpace = document.getElementById('guesses-space');
 const guessResults = document.getElementById('guess-results');
 const numberGuessed = document.getElementById('number-guessed');
@@ -12,9 +11,10 @@ let guessesRemaining = 4;
 guessButton.addEventListener('click', () => {
     guessNumber(randomNumber, numberGuessed);
     guessesSpace.textContent = guessesRemaining;
+    console.log(randomNumber);
 });
 
-function guessNumber(randomNumber, numberGuessed){
+export function guessNumber(randomNumber, numberGuessed){
     
     --guessesRemaining;
 
@@ -24,6 +24,7 @@ function guessNumber(randomNumber, numberGuessed){
     }else if (Number(numberGuessed.value) > randomNumber){
         guessResults.textContent = 'Too High!';
     } else if (Number(numberGuessed.value) === randomNumber){
+        guessButton.disabled = true;
         guessResults.textContent = 'You win!';
     } else if (Number(numberGuessed.value) < randomNumber){
         guessResults.textContent = 'Too low!';
