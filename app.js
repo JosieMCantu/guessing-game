@@ -20,7 +20,7 @@ export function guessNumber(randomNumber, numberGuessed){
     if (guessesRemaining < 1){
         guessButton.disabled = true;
         guessResults.textContent = 'No more guesses';
-    }else if (Number(numberGuessed.value) > randomNumber){
+    } else if (Number(numberGuessed.value) > randomNumber){
         guessResults.textContent = 'Too High!';
     } else if (Number(numberGuessed.value) === randomNumber){
         guessButton.disabled = true;
