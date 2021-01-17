@@ -11,7 +11,6 @@ let guessesRemaining = 4;
 guessButton.addEventListener('click', () => {
     guessNumber(randomNumber, numberGuessed);
     guessesSpace.textContent = guessesRemaining;
-    console.log(randomNumber);
 });
 
 export function guessNumber(randomNumber, numberGuessed){
